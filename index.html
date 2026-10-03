@@ -314,8 +314,11 @@ box-shadow: 0 5px 25px rgba(80, 50, 60, 0.08);
 
 
       // 今日の日付
-      const today =
-        new Date().toISOString().split("T")[0];
+      const now = new Date();
+const today =
+  now.getFullYear() + "-" +
+  String(now.getMonth() + 1).padStart(2, "0") + "-" +
+  String(now.getDate()).padStart(2, "0");
 
 
       // 投票を保存
